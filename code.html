@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Resume</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        /* Layout Container */
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1100px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 30%;
+            background-color: #1a2a3a;
+            color: white;
+            padding: 40px 25px;
+        }
+
+        .sidebar img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3498db;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .sidebar .role {
+            text-align: center;
+            color: #3498db;
+            font-weight: bold;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+
+        .sidebar h3 {
+            border-bottom: 1px solid #34495e;
+            padding-bottom: 8px;
+            margin: 25px 0 15px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding-left: 5px;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        /* Main Content Styling */
+        .Main-Content {
+            width: 70%;
+            padding: 50px;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        section h2 {
+            color: #1a2a3a;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        section p {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        strong {
+            color: #2c3e50;
+        }
+
+        /* Image Grid Styling */
+        .certificates, .my-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .certificates img, .my-images img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            transition: transform 0.3s ease;
+        }
+
+        .certificates img:hover, .my-images img:hover {
+            transform: scale(1.05);
+            border-color: #3498db;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 850px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar, .Main-Content {
+                width: 100%;
+            }
+            .sidebar img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <!-- Relative paths based on your provided structure -->
+        <img src="Profile_Photo/PP.jpeg" alt="ADITI KANGANE">
+
+        <h2>ADITI KANGANE</h2>
+        <p class="role">Civil Engineering Student</p>
+
+        <div class="contact">
+            <h3>Contact</h3>
+            <p>Email: kanganeaditi9@gmail.com</p>
+            <p>Phone: 8882722688</p>
+        </div>
+
+        <div class="skills">
+            <h3>Skills</h3>
+            <ul>
+                <li>AutoCAD</li>
+                <li>Surveying</li>
+                <li>Python</li>
+                <li>Geomatics</li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="Main-Content">
+
+        <section>
+            <h2>About Me</h2>
+            <p>
+                I am a civil engineering student passionate about infrastructure,
+                construction, and sustainable development.
+            </p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <p><strong>MIT Academy Of Engineering</strong><br>FY BTech.</p>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <p><strong>AutoCAD drawings</strong><br>House Planning and 3D Blocks.</p>
+            <p><strong>Electronic Science</strong><br>Earthquake Detector Model.</p>
+        </section>
+
+        <section>
+            <h2>Case Study</h2>
+            <p>Channel Tunnel (English Tunnel)</p>
+            <p>Burj Khalifa</p>
+            <p>Nashik Akkalkot Green Corridor</p>
+            <p>Samruddhi Mahamarg</p>
+        </section>
+
+        <section>
+            <h2>Certificates</h2>
+            <div class="certificates">
+                <img src="certificates/pythonessentials1.jpeg" alt="Certificate 1">
+                <img src="certificates/pythonessentials2.jpeg" alt="Certificate 2">
+                <img src="certificates/anthropy1.jpeg" alt="Certificate 3">
+                <img src="certificates/anthropy2.jpeg" alt="Certificate 4">
+                <img src="certificates/anthropy3.jpeg" alt="Certificate 5">
+                <img src="certificates/anthropy4.jpeg" alt="Certificate 6">
+            </div>
+        </section>
+
+        <section>
+            <h2>My Images</h2>
+            <div class="my-images">
+                <img src="my-images/art.jpeg" alt="Image 1">
+                <img src="my-images/doodle.jpeg" alt="Image 2">
+                <img src="my-images/mandala.art.jpeg" alt="Image 3">
+                <img src="my-images/painting.jpeg" alt="Image 4">
+                <img src="my-images/poster.jpeg" alt="Image 5">
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
